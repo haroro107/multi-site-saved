@@ -43,7 +43,7 @@
         let animeUrl = link.href;
         let button = document.createElement('button');
         button.textContent = watchedList[animeUrl] ? 'Saved' : 'Get';
-        button.style.marginRight = '10px';
+        button.style.marginRight = '5px';
         button.style.cursor = 'pointer';
         button.style.backgroundColor = watchedList[animeUrl] ? colors.watched : colors.unwatched;
         button.style.color = 'white';
