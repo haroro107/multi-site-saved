@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Multi-Site Anime Watched Button
 // @namespace    http://tampermonkey.net/
-// @version      1.2
+// @version      1.3
 // @description  Add a watched/unwatched button to multiple anime listing sites
 // @author       You
 // @match        *://kusonime.com/*
-// @match        *://example-anime-site.com/*  // Add more sites here
+// @match        *://doronime.id/*
 // @grant        none
 // ==/UserScript==
 
@@ -23,7 +23,7 @@
     }
 
     let watchedList = getAnimeList();
-    
+
     // Material colors
     const colors = {
         watched: '#4CAF50', // Green
@@ -33,7 +33,7 @@
     // Site-specific query selectors
     const siteSelectors = {
         'kusonime.com': '.kover h2 a',
-        'example-anime-site.com': '.anime-title a' // Customize for another site
+        'doronime.id': '.Card__caption-title a' // Customize for another site
     };
 
     let currentSite = Object.keys(siteSelectors).find(site => location.hostname.includes(site));
